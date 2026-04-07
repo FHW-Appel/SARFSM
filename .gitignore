@@ -1,1 +1,6 @@
 sizer.txt
+runs/
+sarfsm/
+sarfsm_taskbmc/
+sarfsm_taskcover/
+
