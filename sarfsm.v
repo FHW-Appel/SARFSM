@@ -22,4 +22,42 @@ always @(posedge clk) begin
         end
     end
 end
+
+
+`ifdef FORMAL
+
+    reg f_past_valid = 0;
+
+    initial assume (rst_n == 0);
+    always @(posedge clk) begin
+        
+        f_past_valid <= 1;
+
+        if (f_past_valid) begin
+            
+            // Cover 0101 at the output
+            _c_0101_: cover(sar_out == 4'b0101);
+
+            // Cover 1010 at the output
+            _c_1010_: cover(sar_out == 4'b1010);
+
+            // cover reset behavior
+            _c_reset_: cover($past(rst_n) == 0 && sar_out == 4'b0000);
+
+            // After reset, ivalues should be zero
+            if ($past(rst_n) == 0) begin
+                _a_prove_reset_: assert(sar_out == 4'b0000);
+            end else begin
+                // Check behavior based on compare signal
+                if ($past(compare)) begin
+                    _a_prove_set_bit_: assert(sar_out == ($past(sar_out) | $past(active_bit)));
+                end else begin
+                    _a_prove_no_set_bit_: assert(sar_out == $past(sar_out));
+                end
+            end
+        end
+
+    end
+`endif
+
 endmodule
