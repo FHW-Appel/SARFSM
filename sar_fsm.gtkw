@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
-[*] Tue Apr  7 12:29:43 2026
+[*] Fri Apr 10 10:54:03 2026
 [*]
-[dumpfile] "/foss/designs/SARFSM/sarfsm_taskcover/engine_0/trace1.vcd"
-[dumpfile_mtime] "Tue Apr  7 12:22:33 2026"
-[dumpfile_size] 1294
+[dumpfile] "/foss/designs/SARFSM/sarfsm_taskbmc/engine_0/trace.vcd"
+[dumpfile_mtime] "Fri Apr 10 10:52:16 2026"
+[dumpfile_size] 1299
 [savefile] "/foss/designs/SARFSM/sar_fsm.gtkw"
 [timestart] 0
 [size] 1427 600
 [pos] -1 -1
-*-4.586825 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+*-2.990181 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 [markername] AA
 [markername] BB
 [markername] CC
@@ -38,22 +38,19 @@
 [markername] ZZ
 [treeopen] sar_fsm.
 [sst_width] 297
-[signals_width] 174
+[signals_width] 150
 [sst_expanded] 1
 [sst_vpaned_height] 149
 @28
-sar_fsm._witness_.anyinit_procdff_71
-sar_fsm._c_0101__EN
-sar_fsm._c_1010__EN
-sar_fsm._c_reset__EN
+sar_fsm.clk
+@29
+sar_fsm.rst_n
 @22
 sar_fsm.active_bit[3:0]
 @28
-sar_fsm.clk
 sar_fsm.compare
-sar_fsm.f_past_valid
-sar_fsm.rst_n
-@29
+sar_fsm.sar_int[3:0]
+sar_fsm.EOC
 sar_fsm.sar_out[3:0]
 [pattern_trace] 1
 [pattern_trace] 0
