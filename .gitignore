@@ -3,4 +3,4 @@ runs/
 sarfsm/
 sarfsm_taskbmc/
 sarfsm_taskcover/
-
+test/fpga/sar_fsm/
