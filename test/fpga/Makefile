@@ -1,9 +1,9 @@
 
 PROJ  = sar_fsm
-FILES = ./sarfsm.v
+FILES = ./../../src/sarfsm.v
 FREQ  = 20
 
-DIR   = ./test/fpga/$(PROJ)/
+DIR   = ./$(PROJ)/
 
 .PHONY: prog_fpga all clean
 
