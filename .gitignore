@@ -4,3 +4,5 @@ sarfsm/
 sarfsm_taskbmc/
 sarfsm_taskcover/
 test/fpga/sar_fsm/
+test/sim_build/
+test/results.xml
