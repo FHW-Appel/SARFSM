@@ -11,7 +11,7 @@ prove_bmc: mode bmc
 smtbmc
 
 [files]
-sarfsm.v
+../src/sarfsm.v
 
 [script]
 read -formal sarfsm.v 
