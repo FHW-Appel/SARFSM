@@ -5,10 +5,4 @@ cocotb:
 		VERILOG_SOURCES=$(PWD)/../src/sarfsm.v \
 		TOPLEVEL=sar_fsm \
 		COCOTB_TEST_MODULES=sarfsm
-
-
-
-
-
-
-
+		
