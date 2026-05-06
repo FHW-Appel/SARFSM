@@ -100,3 +100,12 @@ assign internal_EOC = (active_bit == 1);
 `endif
 
 endmodule
+
+
+module cocotb_iverilog_dump();
+    initial begin
+        $dumpfile ("sim_build/sar_fsm.vcd");
+        $dumpvars (0, sar_fsm);
+        #1;
+    end
+endmodule
