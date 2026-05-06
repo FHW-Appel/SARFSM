@@ -26,7 +26,7 @@ $(DIR)$(PROJ).asc: $(DIR)$(PROJ).json
 	              --freq $(FREQ) \
 	              --package sg48 \
 	              --up5k \
-	              --pcf ./test/fpga/icebreaker.pcf \
+	              --pcf ./icebreaker.pcf \
 	              --json $(DIR)$(PROJ).json \
 	              --asc  $(DIR)$(PROJ).asc
 
